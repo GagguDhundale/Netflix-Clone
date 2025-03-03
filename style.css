@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    box-sizing: border-box;
+}
+.main {
+    background-image: url("assets/images/bi.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 80vh;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+.main .box {
+    height: 80vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.69;
+    position: absolute;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    max-width: 80vw;
+    margin: auto;
+    justify-content: space-between;
+    height: 85px;
+}
+
+nav img {
+    color: red;
+    height: 130px;
+    position: relative;
+    z-index: 10;
+    max-width: 100%;
+}
+
+nav button{
+    position: relative;
+    z-index: 1;
+    height: 30px;
+    width: 10vw;
+    font-family:"Martel Sans", serif; 
+}
+
+
+
+.leo {
+    font-family: "Martel Sans", serif;
+    height: calc(100% - 85px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.leo> :nth-child(1) {
+    font-weight: 900;
+    font-size: clamp(32px, 5vw, 50px);
+    height: auto;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.leo> :nth-child(2) {
+    font-weight: 400;
+    font-size: clamp(18px, 3vw, 24px);
+    text-align: center;
+    overflow: auto;
+}
+
+.leo> :nth-child(3) {
+    font-weight: 400;
+    font-size: clamp(12px, 2vw, 15px);
+    text-align: center;
+}
+
+.leo div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.leo div button {
+    font-family: "Martel Sans", serif;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    max-width: 200px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    font-size: 25px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.leo input {
+    width: 100%;
+    max-width: 280px;
+    height: 50px;
+    background-color: rgb(23,23,23,0.2);
+    font-family: "Martel Sans", serif;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+input::placeholder {
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+    .leo div {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .leo input {
+        max-width: 300px;
+    }
+}
+
+.seperation{
+    height: 7px;
+    background-color: rgb(48, 46, 46);
+}
+.bnt-sin-in{
+    position: relative;
+    border-radius: 10px;
+    font-weight: 500;
+    background-color: rgb(23,23,23,0.2);
+    color: white;
+    border: 1px solid white;
+    
+    
+}
+.bnt-red-sm{
+   color: white;
+   background-color: red;
+   width: 7vw;
+   text-align: center;
+   border-radius: 10px;
+
+}
+div h1{
+    color: white;
+    font-family: "Martel Sans", serif;
+    font-size: 25px;
+    margin-top:8vh;
+    margin-left: 9vw;
+}
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 16vh;
+}
+
+.movie-card, .movie-card2, .movie-card3, .movie-card4, .movie-card5, .movie-card6 {
+    position: relative;
+    width: calc(16% - 20px); /* Adjust width for responsiveness */
+    min-width: 150px;
+    max-width: 220px;
+    aspect-ratio: 2/3;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie-card img, .movie-card2 img, .movie-card3 img, .movie-card4 img, .movie-card5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.rank {
+    position: absolute;
+    bottom: -20px;
+    left: 1px;
+    color: white;
+    font-size: 100px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+    .movie-card, .movie-card2, .movie-card3, .movie-card4, .movie-card5 {
+        width: calc(20% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .movie-card, .movie-card2, .movie-card3, .movie-card4, .movie-card5 {
+        width: calc(25% - 20px);
+    }
+
+    .rank {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-card, .movie-card2, .movie-card3, .movie-card4, .movie-card5 {
+        width: calc(50% - 20px);
+    }
+
+    .rank {
+        font-size: 100px;
+    }
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 10%;
+}
+
+.feature-card {
+    background: rgb(65, 63, 65);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    color: white;
+}
+
+.feature-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .movie-card {
+        width: 140px;
+        height: 200px;
+    }
+
+    .rank {
+        font-size: 2.5rem;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .feature-card {
+        width: 90%;
+        
+    }
+}
+.little-info{
+    color: rgb(255, 255, 255);
+    font-family:  "Martel Sans", serif;
+    font-size: 30px;
+    margin-left: 9vw;
+    margin-top: 5vh;
+}
+
